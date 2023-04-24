@@ -1024,6 +1024,7 @@ h3 {
 /* line 32, ../../Arafath/CL/December/236. Event-02/HTML/scss/_header.scss */
 .header-area .main-header-area .logo-img {
   text-align: center;
+  
 }
 
 @media (max-width: 767px) {
@@ -1503,7 +1504,7 @@ h3 {
 @media (max-width: 767px) {
   /* line 10, ../../Arafath/CL/December/236. Event-02/HTML/scss/_slider.scss */
   .slider_area .single_slider {
-    height: auto;
+    height: 800px;
   }
 }
 
