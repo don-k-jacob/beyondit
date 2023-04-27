@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="css/slicknav.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -322,7 +324,7 @@
                             <div class="inner_wrap">
                                 <div class="circle_img"></div>
                                 <div class="porgram_top">
-                                    <span class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Animator, Jesus Youth Kerala Professional Team Animator</span>
+                                    <span class=" wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">Animator , Jesus Youth Kerala Professionals Team</span>
                                     <!-- <h4 class=" wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">12 Feb 2020</h4> -->
                                 </div>
                                 <div class="thumb  wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
@@ -382,56 +384,23 @@
             </div>
         </div>
     </div>
-
+    <div class="map_area">
+    <div id="mapid" style="height: 400px; position: relative; overflow: hidden;"></div>
+    <script>
+        var map = L.map('mapid').setView([8.548489, 76.938559], 16);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(map);
+        
+        var marker = L.marker([8.548489, 76.938559]).addTo(map);
+        marker.bindPopup("Vanue: Mar Baselios College of Engineering, Trivandrum ").openPopup();
+    </script>
+    </div>
     <!-- map_area_start  -->
     <div class="map_area">
-        <div id="map" style="height: 600px; position: relative; overflow: hidden;">
-        
-        </div>
-        <script>
-            function initMap() {
-                var uluru = {
-                    lat:  8.548489,
-                        lng: 76.938559
-                };
-                var grayStyles = [{
-                        featureType: "all",
-                        stylers: [{
-                                saturation: -90
-                            },
-                            {
-                                lightness: 50
-                            }
-                        ]
-                    },
-                    {
-                        elementType: 'labels.text.fill',
-                        stylers: [{
-                            color: '#ccdee9'
-                        }]
-                    }
-                ];
-                var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {
-                        lat:  8.548489,
-                        lng: 76.945559
-                    },
-
-                    zoom: 16,
-                    
-                    styles: grayStyles,
-                    scrollwheel: false
-                });
-                var marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-
-    title: 'My Location'
-  });
-            }
-        </script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB20juYQWyjX2qLBHtstq8kGJg4-MAjkis&amp;callback=initMap">
-        </script>
+       
         <div class="location_information black_bg wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
             <h3>Beyond IT </h3>
             <div class="info_wrap">
@@ -444,8 +413,8 @@
                     <p>Bimal Sabu </p>
                 </div>
                 <div class="single_info">
-                    <span>Phone:</span>
-                    <p>+91 89433 62121</p>
+                    <span>Phone: </span>
+                   <a href="tel+918943362121"><button class="button">+91 8943362121</button></a> 
                 </div>
                 
             </div>
@@ -505,7 +474,11 @@
                             <div class="address_details text-center">
                                 <h4 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">28th April 7:30 PM - 01 May 1:00 PM</h4>
                                 <h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">Beyond IT </h3>
-                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Mar Baselios College of Engineering, Trivandrum</p>
+                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Vanue: Mar Baselios College of Engineering, Trivandrum</p>
+                                <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Name: Bimal Sabu </br> Phone:  <button class="button" href="tel+918943362121">+91 8943362121</button></p>
+                                
+
+
                                 <a href="https://forms.zohopublic.in/jypct/form/BeyondITRegistration/formperma/bwFt2-DOkkLQAEK4WH9z8zDsfgfzqV9rxrh-suyUnRU" class="boxed-btn3 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">Register Now</a>
                             </div>
                         </div>
@@ -518,9 +491,9 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <p class="copy_right text-center wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            <!-- Link back to  can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | With 💗 JY Technopark </a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<!-- Link back to  can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
                 </div>
